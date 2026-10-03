@@ -19,7 +19,7 @@ jobs:
       - name: Lint Python
         run: flake8 backend/
       - name: Lint YAML
-        run: yamllint -d "{extends: relaxed, rules: {line-length: disable}}" .github/workflows/
+        run: yamllint .github/workflows/
 
   test:
     name: Test
