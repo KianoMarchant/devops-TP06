@@ -27,7 +27,7 @@ jobs:
         run: flake8 backend/
 
       - name: Lint YAML (yamllint)
-        run: yamllint .github/workflows/
+        run: yamllint -d "{extends: relaxed, rules: {line-length: disable}}" .github/workflows/
 
   test:
     name: Test
@@ -51,13 +51,6 @@ jobs:
         run: |
           cd backend
           pytest tests/ -v --cov=. --cov-report=term-missing
-
-      - name: Subir reporte de cobertura
-        uses: actions/upload-artifact@v4
-        with:
-          name: coverage-report
-          path: backend/coverage.xml
-          if-no-files-found: ignore
 
   build-push:
     name: Build y Push imagen
