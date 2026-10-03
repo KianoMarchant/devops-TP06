@@ -37,7 +37,7 @@ jobs:
       - name: Ejecutar Tests
         run: |
           cd backend
-          pytest tests/ -v --cov=. --cov-report=term-missing
+          PYTHONPATH=. pytest tests/ -v --cov=. --cov-report=term-missing
 
   build-push:
     name: Build y Push imagen
