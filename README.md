@@ -1,4 +1,4 @@
-# DevOps Portfolio — TP0 7: CI/CD
+## DevOps Portfolio — TP0 7: CI/CD
 
 ![CI/CD Pipeline](https://github.com/KianoMarchant/devops-TP06/actions/workflows/cicd.yml/badge.svg)
 
